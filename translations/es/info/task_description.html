@@ -1,0 +1,77 @@
+<div class="story">
+    <p>
+        "El &uacute;ltimo pensamiento claro que tengo es del reloj de pared color herrumbre
+        de mi abuela, andando a la distancia en la oscuridad de mi apartamento -mi
+        santuario donde so&ntilde;&eacute; y dese&eacute; y esper&eacute; por bondad y amor. Me pregunto hace
+        cu&aacute;nto tiempo que el reloj marca sin que haya nadie alrededor para escucharlo.
+        Me pregunto si tal vez deber&iacute;a haber tomado los cubiertos de mi abuela, o las
+        joyas en su lugar. Me pregunto - si hubiera sabido entonces lo que s&eacute; ahora -
+        si todav&iacute;a hubiera me hubiera acercado a Jade en aquella primera noche para
+        invitarla a mi vida, s&oacute;lo para ver como ella me lo quitaba y lo alimentaba a
+        algo sin Dios, como mi madre sol&iacute;a llamarlo. &iquest;Todav&iacute;a me hubiera dado a ella,
+        sabiendo que terminar&iacute;a de la misma manera, con un parpadeo b&aacute;rbaro de
+        esperanza de que esta vez ella pueda amarme?"
+    </p>
+
+    <p>
+        -J. Tonzelli, The End of Summer: Thirteen Tales of Halloween
+    </p>
+</div>
+
+<p>
+  Relojes anal&oacute;gicos muestran el tiempo con una cara anal&oacute;gica, que consiste en una
+  esfera redonda con los n&uacute;meros del 1 al 12, las horas en el d&iacute;a, sobre el exterior.
+  Las horas se indican con una <bold>manecilla de las horas</bold>, que hace dos revoluciones
+  en un d&iacute;a, mientras que los minutos se indican mediante una <bold>manecilla de los minutos</bold>
+  (<em>minutero</em>), que hace una revoluci&oacute;n por hora. En esta misi&oacute;n usaremos un reloj
+  sin segunda manecilla. La manecilla de las horas se mueve sin problemas y el
+  minutero se mueve paso a paso.
+</p>
+
+<p>
+  Se te dar&aacute; una hora en formato de 24 horas y deber&aacute;s calcular el menor &aacute;ngulo entre
+  la hora y los minutos, en grados.  No olvides que el reloj tiene n&uacute;meros de 1 a 12,
+  por lo que 23 == 11. El tiempo se da como una cadena (<em>str</em>) con el siguiente formato
+  "HH: MM", donde HH es la hora y MM son los minutos. Horas y minutos se presentan en
+  formato de dos d&iacute;gitos, por lo que "1" se escribir&aacute;n como "01". El resultado debe
+  ser dado en grados con una exactitud de &plusmn;0.1.
+</p>
+
+<p style="text-align: center;">
+    <img title="clocks" src="{{MEDIA}}clocks.svg" alt="clocks"/>
+</p>
+
+<p>
+  Por ejemplo, en la imagen dada vemos "02:30" &oacute; "14:30" en la parte izquierda
+  y "01:42" &oacute; "13:42" en la parte derecha. Tenemos que encontrar el &aacute;ngulo menor.
+</p>
+<p>
+    <strong>Datos de Entrada: </strong> El tiempo, como una cadena (<em>str</em>).
+</p>
+
+<p>
+    <strong>Salida: </strong> El &aacute;ngulo menor entre las manecillas, como un
+    entero (<em>int</em>) &oacute; un decimal (<em>float</em>).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Ejemplo:</strong>
+    </p>
+    <pre class="brush: python">
+clock_angle("02:30") == 105
+clock_angle("13:42") == 159
+clock_angle("01:43") == 153.5,</pre>
+</div>
+<br>
+<p class="for_info_only">
+    <strong>&iquest;C&oacute;mo se usa?: </strong>
+    Matem&aacute;ticas simples y habilidades para construir un modelo bas&aacute;ndose en
+    varias cosas del mundo real.
+</p>
+
+<p>
+    <strong>Condiciones:</strong><br>
+    re.match("\A((2[0-3])|([0-1][0-9])):[0-5][0-9]\Z", time)
+</p>
