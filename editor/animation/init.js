@@ -124,6 +124,20 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
 //            });
 //        });
 
+        
+
+        //Your Additional functions or objects inside scope
+        //
+        //
+        //
+
+
+    }
+);
+
+
+requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
+    function (extIO, $, TableComponent) {
         function SVG(dom) {
 
             var colorOrange4 = "#F0801A";
@@ -186,12 +200,20 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             }
 
         }
-
-        //Your Additional functions or objects inside scope
-        //
-        //
-        //
-
-
+        var io = new extIO({
+            animation: function($expl, data){
+                var checkioInput = data.in;
+                if (!checkioInput){
+                    return;
+                }
+                var svg = new SVG($expl[0]);
+                svg.draw(checkioInput);
+            },
+            functions: {
+                js: 'clockAngle',
+                python: 'clock_angle'
+            }
+        });
+        io.start();
     }
 );
