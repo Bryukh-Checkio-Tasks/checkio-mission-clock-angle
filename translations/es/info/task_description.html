@@ -38,7 +38,7 @@
 </p>
 
 <p style="text-align: center;">
-    <img title="clocks" src="{{MEDIA}}clocks.svg" alt="clocks"/>
+    <img src="{{MEDIA}}clocks.svg" alt="clocks" style="max-height: 190px" />
 </p>
 
 <p>
@@ -59,10 +59,15 @@
     <p>
         <strong>Ejemplo:</strong>
     </p>
-    <pre class="brush: python">
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+clockAngle("02:30") == 105
+clockAngle("13:42") == 159
+clockAngle("01:43") == 153.5
+{% else %}
 clock_angle("02:30") == 105
 clock_angle("13:42") == 159
-clock_angle("01:43") == 153.5,</pre>
+clock_angle("01:43") == 153.5
+{% endif %}</pre>
 </div>
 <br>
 <p class="for_info_only">
